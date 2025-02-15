@@ -147,6 +147,15 @@ export default async function sinoptikCrawler() {
             //     hrefElement
             // );
 
+            // Try to hover with explicit selector for the current time item
+            // await page.waitForSelector(SELECTOR.timeItemByIndex(timeItems.indexOf(timeItem) + 1));
+            // await page.locator(SELECTOR.timeItemByIndex(timeItems.indexOf(timeItem) + 1)).hover();
+
+            // Get the clickable point of the current time item and move the mouse over
+            // const itemCoordinates = await timeItem.clickablePoint();
+            // await page.mouse.reset();
+            // await page.mouse.move(itemCoordinates.x, itemCoordinates.y, { steps: 10 });
+
             // Wait for the cloudy image to be visible
             logger.info("Waiting for the image to be visible");
             await page.waitForSelector(SELECTOR.CLOUDY_IMG);
